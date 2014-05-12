@@ -2,6 +2,11 @@
 Credits
 =======
 
+Original Snippet
+----------------
+
+This is originally based on a snippet by Chris Beaven (https://github.com/smileychris).
+
 Development Lead
 ----------------
 
