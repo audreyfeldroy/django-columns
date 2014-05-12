@@ -2,11 +2,8 @@
 Installation
 ============
 
-At the command line::
+1. Install the package. At the command line::
 
-    $ easy_install django-columns
-
-Or, if you have virtualenvwrapper installed::
-
-    $ mkvirtualenv django-columns
     $ pip install django-columns
+
+2. Add `columns` to `INSTALLED_APPS`.

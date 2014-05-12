@@ -21,15 +21,22 @@ The full documentation is at https://django-columns.readthedocs.org.
 Quickstart
 ----------
 
-Install django-columns::
+1. Install the package. At the command line::
 
-    pip install django-columns
+    $ pip install django-columns
 
-Then use it in a project::
+2. Add `columns` to `INSTALLED_APPS`.
 
-    import django-columns
+3. Split a list into 2 lists, to fill 2 columns::
 
-Features
---------
+    {% load columns %}
 
-* TODO
+    <div class="row">
+        {% for col in mylist|columns:3 %}
+            <div class="col-md-4">
+                {% for item in col %}
+                    <div class="item">{{ item }}</div>
+                {% endfor %}
+            </div><!-- /col-md-4 -->
+        {% endfor %}
+    </div><!-- /row -->
