@@ -23,6 +23,14 @@ if sys.argv[-1] == 'publish':
 readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
+requirements = [
+    'Django>=1.5.1'
+]
+
+test_requirements = [
+    'coverage'
+]
+
 setup(
     name='django-columns',
     version=version,
@@ -35,9 +43,7 @@ setup(
         'columns',
     ],
     include_package_data=True,
-    install_requires=[
-        'Django>=1.5.1'
-    ],
+    install_requires=requirements,
     license="BSD",
     zip_safe=False,
     keywords='django-columns',
@@ -53,5 +59,6 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
     ],
-    test_suite='tests'
+    test_suite='tests',
+    tests_require=test_requirements
 )
