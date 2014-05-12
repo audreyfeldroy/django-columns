@@ -24,7 +24,7 @@ clean-pyc:
 	find . -name '*~' -exec rm -f {} +
 
 lint:
-	flake8 django-columns tests
+	flake8 columns tests
 
 test:
 	python runtests.py test
@@ -33,15 +33,15 @@ test-all:
 	tox
 
 coverage:
-	coverage run --source django-columns setup.py test
+	coverage run --source columns setup.py test
 	coverage report -m
 	coverage html
 	open htmlcov/index.html
 
 docs:
-	rm -f docs/django-columns.rst
+	rm -f docs/columns.rst
 	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ django-columns
+	sphinx-apidoc -o docs/ columns
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
 	open docs/_build/html/index.html
