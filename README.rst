@@ -27,7 +27,24 @@ Quickstart
 
 2. Add `columns` to `INSTALLED_APPS`.
 
-3. Split a list into 2 lists, to fill 2 columns::
+3. Using django-columns is easy. Front-end developers and designers will
+find it particularly useful.
+
+To split a list into 2 lists, to fill 2 Bootstrap grid columns::
+
+    {% load columns %}
+
+    <div class="row">
+        {% for col in mylist|columns:2 %}
+            <div class="col-md-6">
+                {% for item in col %}
+                    <div class="item">{{ item }}</div>
+                {% endfor %}
+            </div><!-- /col-md-6 -->
+        {% endfor %}
+    </div><!-- /row -->
+
+Similarly, to split a list into 3 lists, to fill 3 columns::
 
     {% load columns %}
 
@@ -40,3 +57,6 @@ Quickstart
             </div><!-- /col-md-4 -->
         {% endfor %}
     </div><!-- /row -->
+
+These examples use Bootstrap-style columns, but you can use any other grid
+framework with django-columns.
