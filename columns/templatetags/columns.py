@@ -1,13 +1,14 @@
 """
 Template filters to partition lists into columns.
 
-Code adapted from https://djangosnippets.org/snippets/401/ 
+Code adapted from https://djangosnippets.org/snippets/401/
 
 """
 
 from django.template import Library
 
 register = Library()
+
 
 def columns(thelist, n):
     """
