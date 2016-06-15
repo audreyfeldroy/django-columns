@@ -16,7 +16,7 @@ Django template filter for splitting a list into columns.
 Documentation
 -------------
 
-The full documentation is at https://django-columns.readthedocs.org.
+The full documentation is at https://django-columns.readthedocs.io.
 
 Quickstart
 ----------
